@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Hidden_cipher</class>
+ <widget class="QMainWindow" name="Hidden_cipher">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Hidden cipher</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Загрузки/caesar-cipher.png</normaloff>../../Загрузки/caesar-cipher.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">
@@ -87,7 +91,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_2" native="true">
+     <widget class="QWidget" name="selection_widget" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
         <horstretch>0</horstretch>
@@ -102,7 +106,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item alignment="Qt::AlignTop">
-        <widget class="QWidget" name="widget_5" native="true">
+        <widget class="QWidget" name="encoding_selection_widget" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <property name="spacing">
            <number>0</number>
@@ -120,7 +124,7 @@
            <number>45</number>
           </property>
           <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-           <widget class="QLabel" name="label_3">
+           <widget class="QLabel" name="encoding_algorithm_label">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -133,36 +137,49 @@
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox">
+           <widget class="QComboBox" name="encoding_selection_comboBox">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>Huffman method</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Arithmetic coding (on integers)</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-        <widget class="QWidget" name="widget_7" native="true">
+        <widget class="QWidget" name="path_selection_widget" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="path_selection_button">
             <property name="text">
-             <string>PushButton</string>
+             <string>Path</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_2"/>
+           <widget class="QLineEdit" name="path_lineEdit"/>
           </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="start_button">
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -170,17 +187,17 @@
           </size>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>Start</string>
          </property>
         </widget>
        </item>
        <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
-        <widget class="QWidget" name="widget_8" native="true">
+        <widget class="QWidget" name="information_widget" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="About_button">
             <property name="text">
-             <string>PushButton</string>
+             <string>About</string>
             </property>
            </widget>
           </item>
