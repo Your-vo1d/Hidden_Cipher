@@ -84,7 +84,7 @@ class Ui_Hidden_cipher(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.encoding_selection_comboBox.sizePolicy().hasHeightForWidth())
         self.encoding_selection_comboBox.setSizePolicy(sizePolicy)
-        self.encoding_selection_comboBox.setEditable(True)
+        self.encoding_selection_comboBox.setEditable(False)
         self.encoding_selection_comboBox.setObjectName("encoding_selection_comboBox")
         self.encoding_selection_comboBox.addItem("")
         self.encoding_selection_comboBox.addItem("")
