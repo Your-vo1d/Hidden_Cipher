@@ -72,7 +72,7 @@
         <widget class="QWidget" name="linut_encode_file_widget" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QPushButton" name="choose_encode_file_button">
+           <widget class="QPushButton" name="select_encode_file_button">
             <property name="text">
              <string>File</string>
             </property>
@@ -230,17 +230,17 @@
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_6" native="true">
+        <widget class="QWidget" name="linut_decode_file_widget" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="select_decode_file_button">
             <property name="text">
              <string>File</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="path_decode_file"/>
           </item>
          </layout>
         </widget>
