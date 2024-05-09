@@ -1,7 +1,8 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
 from interface import Ui_Hidden_cipher
+from event_handlers import EventHandlers
 
 
 class HiddenCipherApp(QMainWindow, Ui_Hidden_cipher):
@@ -11,19 +12,16 @@ class HiddenCipherApp(QMainWindow, Ui_Hidden_cipher):
         self.setWindowTitle("Hidden Cipher")
         self.setWindowIcon(QIcon("/img/icon.png"))
 
+        # Создаем экземпляр класса для обработчиков событий
+        self.event_handlers = EventHandlers(self)
+
+        # Подключаем обработчики событий к соответствующим кнопкам
         self.path_selection_button.clicked.connect(
-            self.path_selection_button_clicked)
-
-    def path_selection_button_clicked(self):
-        options = QFileDialog.Options()
-
-        options |= QFileDialog.DontUseNativeDialog
-
-        selected_directory = QFileDialog.getExistingDirectory(
-            self, "Select Directory", options=options)
-
-        if selected_directory:
-            self.path_lineEdit.setText(selected_directory)
+            self.event_handlers.path_selection_button_clicked)
+        self.select_encode_file_button.clicked.connect(
+            self.event_handlers.encode_file_clicked)
+        self.about_button.clicked.connect(
+            self.event_handlers.about_button_clicked)
 
 
 def main():
