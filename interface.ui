@@ -195,7 +195,7 @@
         <widget class="QWidget" name="information_widget" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <widget class="QPushButton" name="About_button">
+           <widget class="QPushButton" name="about_button">
             <property name="text">
              <string>About</string>
             </property>
