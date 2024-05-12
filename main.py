@@ -22,7 +22,9 @@ class HiddenCipherApp(QMainWindow, Ui_Hidden_cipher):
             self.event_handlers.encode_file_clicked)
         self.about_button.clicked.connect(
             self.event_handlers.about_button_clicked)
-
+        self.select_decode_file_button.clicked.connect(
+            self.event_handlers.decode_file_clicked)
+        
 
 def main():
     app = QApplication(sys.argv)
