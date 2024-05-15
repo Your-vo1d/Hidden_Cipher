@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>about_Widget</class>
- <widget class="QMainWindow" name="about_Widget">
+ <class>AboutWidget</class>
+ <widget class="QMainWindow" name="AboutWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>560</width>
-    <height>460</height>
+    <width>900</width>
+    <height>500</height>
    </rect>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+  <widget class="QWidget" name="central_widget">
+   <layout class="QHBoxLayout" name="horizontal_layout">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -27,9 +27,24 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
+    <property name="left_margin" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="top_margin" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="right_margin" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="bottom_margin" stdset="0">
+     <number>0</number>
+    </property>
     <item>
-     <widget class="QWidget" name="widget" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <widget class="QWidget" name="button_container" native="true">
+      <layout class="QHBoxLayout" name="button_layout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -42,9 +57,33 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
+       <property name="left_margin" stdset="0">
+        <number>0</number>
+       </property>
+       <property name="top_margin" stdset="0">
+        <number>0</number>
+       </property>
+       <property name="right_margin" stdset="0">
+        <number>0</number>
+       </property>
+       <property name="bottom_margin" stdset="0">
+        <number>0</number>
+       </property>
        <item>
-        <widget class="QWidget" name="widget_2" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout">
+        <widget class="QWidget" name="button_group" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>500</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="button_vbox_layout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -60,42 +99,72 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <property name="left_margin" stdset="0">
+           <number>0</number>
+          </property>
+          <property name="top_margin" stdset="0">
+           <number>0</number>
+          </property>
+          <property name="right_margin" stdset="0">
+           <number>0</number>
+          </property>
+          <property name="bottom_margin" stdset="0">
+           <number>0</number>
+          </property>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="about_button">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>About</string>
+            </property>
+            <property name="size_policy" stdset="0">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="huffman_button">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Huffman</string>
+            </property>
+            <property name="size_policy" stdset="0">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="arithmetic_button">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Arithmetic</string>
+            </property>
+            <property name="size_policy" stdset="0">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
            </widget>
           </item>
@@ -103,8 +172,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit">
-         <property name="sizePolicy">
+        <widget class="QTextEdit" name="info_text_edit">
+         <property name="minimumSize">
+          <size>
+           <width>700</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="size_policy" stdset="0">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
