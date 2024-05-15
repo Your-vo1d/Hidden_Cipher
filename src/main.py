@@ -1,8 +1,8 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
-from interface import Ui_Hidden_cipher
-from event_handlers import EventHandlers
+from src.interface import Ui_Hidden_cipher
+from src.event_handlers import EventHandlers
 
 
 class HiddenCipherApp(QMainWindow, Ui_Hidden_cipher):
